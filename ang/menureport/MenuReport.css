@@ -1,0 +1,10 @@
+.crm-container .reportsList td{
+  padding: 5px 10px;
+}
+
+.crm-container .reportsList tr{
+  border: 1px solid;
+  padding: 5;
+  cursor: pointer;
+  background-color: white;
+}
