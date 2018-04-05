@@ -35,9 +35,15 @@
     var ts = $scope.ts = CRM.ts('menureport');
     var hs = $scope.hs = crmUiHelp({file: 'CRM/menureport/MenuReport'}); // See: templates/CRM/menureport/MenuReport.hlp
 
-    var orderReportsListArray = orderReportsList.values.split(",");
 
-    var  reportsListvalues = reportsList.values;
+    if(orderReportsList.values == null) {
+      var orderReportsListArray = [];
+    }
+    else {
+      var orderReportsListArray = orderReportsList.values.split(",");
+    }
+
+    var reportsListvalues = reportsList.values;
 
     reportsListvalues.sort(sortFunc);
 
@@ -56,9 +62,7 @@
               "sequential": 1,
               "value": logEntry
             }).done(function(result) {
-              console.log(logEntry);
           });
-        //$scope.sortingLog.push("Update: " + logEntry);
       },
       stop: function(e, ui) {
         // this callback has the changed model
@@ -71,8 +75,6 @@
               "sequential": 1,
               "value": logEntry
             }).done(function(result) {
-              console.log(logEntry);
-
           });
       },
     };
@@ -88,9 +90,7 @@
         }
       }
       return false;
-
     }
-
   });
 
 })(angular, CRM.$, CRM._);
