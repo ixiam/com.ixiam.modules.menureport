@@ -5,11 +5,10 @@
   <h1 crm-page-title>Menu Reports</h1>
   <table class="floatleft reportsList" crm-ui-id-scope>
      <tbody ui-sortable="sortableOptions" ng-model="list" class="list">
-        <tr ng-repeat="item in list" class="item" style="border: 1px solid;  padding: 5;  cursor: pointer;  background-color: white;">
-        <td style="padding: 5px 10px;"><a href = "/civicrm/report/instance/{{item.id}}?reset=1">{{item.title}}</a>   </td>
-         <td style="padding: 5px 10px;">{{item.description}}<td>
-           <td style="padding: 5px 10px;">{{item.id}}<td>
-
+        <tr ng-repeat="item in list" class="item" style="border: 1px solid;  padding: 5;  cursor: pointer;  background-color: white;" >
+        <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;"><a href = "/civicrm/report/instance/{{item.id}}?reset=1">{{item.title}}</a>   </td>
+         <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;">{{item.description}}<td>
+           <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;">{{item.id}}<td>
        </td>
      </tbody>
   </table>
