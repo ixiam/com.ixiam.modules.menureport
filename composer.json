@@ -1,0 +1,5 @@
+{
+  "name": "civicrm/menureport",
+  "description": "List of reports sortable",
+  "type": "civicrm-ext"
+}
