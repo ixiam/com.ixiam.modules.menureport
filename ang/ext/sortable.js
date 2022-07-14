@@ -21,15 +21,9 @@ angular
         scope: {
           ngModel: '=',
           uiSortable: '=',
-          ////Expression bindings from html.
           create: '&uiSortableCreate',
-          // helper:'&uiSortableHelper',
           start: '&uiSortableStart',
           activate: '&uiSortableActivate',
-          // sort:'&uiSortableSort',
-          // change:'&uiSortableChange',
-          // over:'&uiSortableOver',
-          // out:'&uiSortableOut',
           beforeStop: '&uiSortableBeforeStop',
           update: '&uiSortableUpdate',
           remove: '&uiSortableRemove',
@@ -308,10 +302,6 @@ angular
             create: null,
             start: null,
             activate: null,
-            // sort: null,
-            // change: null,
-            // over: null,
-            // out: null,
             beforeStop: null,
             update: null,
             remove: null,
@@ -641,7 +631,6 @@ angular
               },
               true
             );
-
             patchUISortableOptions(opts);
           }
 
@@ -655,18 +644,14 @@ angular
             // Create sortable
             element.sortable(opts);
           }
-
           function initIfEnabled() {
             if (scope.uiSortable && scope.uiSortable.disabled) {
               return false;
             }
-
             init();
-
             // Stop Watcher
             initIfEnabled.cancelWatcher();
             initIfEnabled.cancelWatcher = angular.noop;
-
             return true;
           }
 
