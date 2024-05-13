@@ -8,8 +8,8 @@
     <author>Ruben</author>
     <email>r.pineda@ixiam.com</email>
   </maintainer>
-  <releaseDate>2022-07-14</releaseDate>
-  <version>2.1.0</version>
+  <releaseDate>2024-05-13</releaseDate>
+  <version>2.2.0</version>
   <develStage>stable</develStage>
   <compatibility>
     <ver>5.x</ver>
@@ -17,5 +17,12 @@
   <comments>A page to sort the reports instances</comments>
   <civix>
     <namespace>CRM/Menureport</namespace>
+    <format>23.02.1</format>
   </civix>
+  <mixins>
+    <mixin>ang-php@1.0.0</mixin>
+  </mixins>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
