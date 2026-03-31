@@ -5,19 +5,19 @@
   <description>A page to sort the reports</description>
   <license>AGPL-3.0</license>
   <maintainer>
-    <author>Ruben</author>
-    <email>r.pineda@ixiam.com</email>
+    <author>IXIAM</author>
+    <email>info@ixiam.com</email>
   </maintainer>
-  <releaseDate>2024-05-13</releaseDate>
-  <version>2.2.0</version>
+  <releaseDate>2026-03-31</releaseDate>
+  <version>2.3.0</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.x</ver>
+    <ver>6.4</ver>
   </compatibility>
   <comments>A page to sort the reports instances</comments>
   <civix>
     <namespace>CRM/Menureport</namespace>
-    <format>23.02.1</format>
+    <format>25.01.1</format>
   </civix>
   <mixins>
     <mixin>ang-php@1.0.0</mixin>
