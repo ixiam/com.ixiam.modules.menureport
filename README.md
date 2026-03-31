@@ -2,6 +2,8 @@
 
 This extension allows users to manage and sort the list of custom reports in CiviCRM through a drag-and-drop interface.
 
+![Screenshot](/images/screenshot.png)
+
 ## Usage
 
 1. Navigate to: `civicrm/a/#/menureport`
