@@ -1,15 +1,20 @@
 <div class="crm-container">
-  <div crm-ui-debug="list"></div>
-  <div crm-ui-debug="emailrecors"></div>
+  <h1 crm-page-title>{{ ts('Menu Reports') }}</h1>
 
-  <h1 crm-page-title>Menu Reports</h1>
+  <div class="menureport-actions">
+    <input type="text" ng-model="searchTerm" placeholder="{{ ts('Search reports...') }}" />
+    <span ng-show="searchTerm" class="menureport-sorting-warning">
+      {{ ts('Sorting disabled while searching') }}
+    </span>
+  </div>
+
   <table class="floatleft reportsList" crm-ui-id-scope>
      <tbody ui-sortable="sortableOptions" ng-model="list" class="list">
-        <tr ng-repeat="item in list" class="item" style="border: 1px solid;  padding: 5;  cursor: pointer;  background-color: white;" >
-        <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;"><a href = "/civicrm/report/instance/{{item.id}}?reset=1">{{item.title}}</a>   </td>
-         <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;">{{item.description}}<td>
-           <td ng-class-odd="'odd-row'" ng-class-even="'even-row'" style="padding: 5px 10px;">{{item.id}}<td>
-       </td>
+        <tr ng-repeat="item in list | filter:searchTerm" class="item">
+          <td ng-class-odd="'odd-row'" ng-class-even="'even-row'"><a href="/civicrm/report/instance/{{item.id}}?reset=1">{{item.title}}</a></td>
+          <td ng-class-odd="'odd-row'" ng-class-even="'even-row'">{{item.description}}</td>
+          <td ng-class-odd="'odd-row'" ng-class-even="'even-row'">#{{item.id}}</td>
+        </tr>
      </tbody>
   </table>
 </div>

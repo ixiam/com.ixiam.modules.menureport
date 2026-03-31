@@ -1,7 +1,5 @@
 Package: com.ixiam.modules.menureport
-Copyright (C) 2018, Ruben <r.pineda@ixiam.com>
 Licensed under the GNU Affero Public License 3.0 (below).
-
 -------------------------------------------------------------------------------
 
                     GNU AFFERO GENERAL PUBLIC LICENSE

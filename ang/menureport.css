@@ -1,1 +1,30 @@
-/* Add any CSS rules for Angular module "menureport" */
+/*
+ * Global styles for the "menureport" Angular module.
+ */
+
+.crm-container .reportsList td {
+  padding: 5px 10px;
+}
+
+.crm-container .reportsList tr {
+  border: 1px solid;
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.menureport-actions {
+  margin-bottom: 20px;
+}
+
+.menureport-actions input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.menureport-sorting-warning {
+  font-size: 0.8em;
+  color: #666; margin-left: 10px;
+}
